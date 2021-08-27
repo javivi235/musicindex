@@ -38,7 +38,7 @@ describe('Header', () => {
         expect(link).to.exist
         link.trigger('click')
         console.log('ASSSSSSSSSSSSSSSSSSSSSSSSSSS')
-        assert.equal(wrapper.vm.$route.path, '/')
+        assert.equal(wrapper.vm.$route.path, '/', 'App title is not redirecting to home')
     
     })
 

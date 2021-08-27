@@ -1,41 +1,33 @@
 <template>
   <div id="app">
     <Header title="True Music Index"></Header>
-    <router-view/>
+    <router-view style="min-height: 100vh;"/>
+    <Footer/>
   </div>
 </template>
 
 <script>
 
   import Header from './components/Header.vue'
+  import Footer from './components/Footer.vue'
 
   export default {
     name: 'App',
     components: {
-      Header
+      Header,
+      Footer,
     }
   }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    background-color: lightgreen;
+    height: 100vh + 200px;
+    width: 100vw;
+  }
 </style>
