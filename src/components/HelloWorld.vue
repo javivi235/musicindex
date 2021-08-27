@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-secondary">{{msg}}</button>
   </div>
 </template>
 
