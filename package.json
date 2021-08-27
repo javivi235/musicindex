@@ -8,9 +8,13 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "vue": "^2.6.11"
+    "bootstrap": "^5.1.0",
+    "bootstrap-vue": "^2.21.2",
+    "vue": "^2.6.11",
+    "vue-router": "^3.5.2"
   },
   "devDependencies": {
+    "@vue/cli-plugin-router": "^4.5.13",
     "@vue/cli-plugin-unit-mocha": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/test-utils": "^1.0.3",
