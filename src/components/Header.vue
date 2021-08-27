@@ -24,7 +24,7 @@
 <style scoped>
 
 #navbar {
-    background-color: lightgreen;
+    background-color: #444444;
     align-content: center;
 }
 div {
