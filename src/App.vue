@@ -1,8 +1,10 @@
 <template>
   <div id="app">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <Header title="True Music Index"></Header>
-    <router-view style="min-height: 100vh;"/>
+    <router-view style="min-height: 90vh;"/>
     <Footer/>
+
   </div>
 </template>
 
@@ -22,12 +24,9 @@
 
 <style>
   #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    background-color: lightgreen;
-    height: 100vh + 200px;
+    background-color: #013220;
+    height: 100vh + 100px;
     width: 100vw;
   }
 </style>

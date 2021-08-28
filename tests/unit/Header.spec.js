@@ -7,38 +7,28 @@ import Header from '@/components/Header.vue'
 describe('Header', () => {
 
     let localVue
-    const router = new VueRouter()
+    let router
     let wrapper
     const title = 'True Music Index'
-    const $route = {
-        path: '/some/path'
-    }
 
     beforeEach(() => {
 
         localVue = createLocalVue()
         localVue.use(VueRouter)
+        router = new VueRouter()
 
         wrapper = shallowMount(Header, {
             propsData: { title },
             localVue,
             router,
-            mocks: {
-                $route
-            }
+            stubs: ['router-link', 'router-view']
         })
 
     })
 
-    it('Aplication Navbar shoud exist and shoud redirect to home', () => {
-        
-        const nav = wrapper.find('#navbar')
-        expect(nav).to.exist
-        const link = wrapper.find('#appName')
-        expect(link).to.exist
-        link.trigger('click')
-        console.log('ASSSSSSSSSSSSSSSSSSSSSSSSSSS')
-        assert.equal(wrapper.vm.$route.path, '/', 'App title is not redirecting to home')
+    it('Aplication Navbar shoud exist and shoud redirect to home', async () => {
+ 
+        assert.equal(wrapper.find('#appName').props().to, '/', 'App name doesnt redict home')
     
     })
 
