@@ -1,7 +1,7 @@
 import { expect, assert } from 'chai'
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 
-import { searchSong } from '../../src/Utils/ITunesAPIUtil.js'
+import { searchSong } from '@/Utils/ITunesAPIUtil.js'
 
 describe('ITunes API Util methods', () => {
 
