@@ -1,6 +1,6 @@
 <template>
 
-    <div class="card text-center songCard" style="height: 65vh; width: 23vw;">
+    <div class="card text-center songCard" style="height: 65vh; width: 100%;">
 
         <img
         :src="image"
@@ -8,9 +8,9 @@
         :alt="name"
         >
 
-        <div class="card-body">
+        <div class="card-body" >
 
-            <div class="row" style="overflow-y:hidden; height: 80%;">
+            <div class="row" style="overflow-y: scroll; height: 150px;">
 
                 <h5 class="card-title trackName">{{ name }}</h5>
                 <p class="card-text trackInfo">{{ album }} - {{artist}}</p>
