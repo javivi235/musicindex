@@ -2,6 +2,8 @@
 
 Tool to search music from ITunes
 
+## Tecnical details about the code can be found at the file documentation.docx
+
 ## Project setup
 
 To run this project please use:
@@ -24,3 +26,5 @@ npm run build
 ```
 npm run test:unit
 ```
+
+
