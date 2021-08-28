@@ -1,5 +1,5 @@
 import { expect, assert } from 'chai'
-import { shallowMount, createLocalVue } from '@vue/test-utils'
+import { shallowMount } from '@vue/test-utils'
 
 import SearchBar from '@/components/SearchBar.vue'
 
