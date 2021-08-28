@@ -3,7 +3,7 @@
 
         <div id="searchContainer" class="container rounded">
             <div class="row">
-               <button @click="click()">Press</button>
+               <SearchBar @searchSong="searchSong"/>
             </div>
         </div>
 
@@ -11,16 +11,27 @@
 </template>
 
 <script>
+    import SearchBar from '@/components/SearchBar.vue'
     import { searchSong } from '../Utils/ITunesAPIUtil.js'
-    export default {
-        methods: {
-            async click(){
 
-                const result = await searchSong('lorde')
+    export default {
+
+        methods: {
+
+            async searchSong(text) {
+
+                const result = await searchSong(text)
                 console.log(result)
 
             }
-        }
+
+        },
+        components: {
+
+            SearchBar,
+        
+        },
+    
     }
 </script>
 

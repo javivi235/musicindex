@@ -1,7 +1,8 @@
 <template>
   <div id="app">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <Header title="True Music Index"></Header>
-    <router-view style="min-height: 100vh;"/>
+    <router-view style="min-height: 90vh;"/>
     <Footer/>
 
   </div>

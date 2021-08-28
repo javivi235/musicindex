@@ -20,7 +20,10 @@ describe('Search bar', () => {
         
         const msg = 'Write the name of a son or an artist here!'
 
-        expect(wrapper.text()).to.include(msg)
+        const input = wrapper.find('#searchInput')
+        expect(input).to.exist
+
+        assert(input.attributes('placeholder'), msg, 'placeholder is wrong')
 
     })
 
@@ -34,10 +37,13 @@ describe('Search bar', () => {
             }
         })
 
-        const button = wrapper.find('#searchButton')
-        expect(button).to.exist
-        await button.trigger('click')
-        assert.equal(wrapper.propsData.text, '', 'Search bar is not being cleared after click on search button')
+        expect(wrapper.find('#searchButton')).to.exist
+
+        await wrapper.setData({ text: 'L-gante' })
+
+        await wrapper.find('#searchButton').trigger('click')
+
+        assert.equal(wrapper.vm.text, '', 'Search bar is not being cleared after click on search button')
 
     })
 
