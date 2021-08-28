@@ -69,7 +69,12 @@
         
         props: {
 
-            songs : []
+            songs : {
+
+                type: Array,
+                default: () => []
+
+            }
 
         },
 
@@ -109,37 +114,73 @@
 
             renderedSongs() {
 
-                let list = []
+                if (this.songs === undefined || this.songs === null) {
+                
+                    return []
+                
+                } else {
 
-                for (var i = 0; i < 3; i++) {
+                    let list = []
 
-                    if (this.songs.length > (i + this.page*3)) {
+                    for (var i = 0; i < 3; i++) {
 
-                        list.push(this.songs[(i + this.page*3)])
+                        if (this.songs.length > (i + this.page*3)) {
+
+                            list.push(this.songs[(i + this.page*3)])
+
+                        }
 
                     }
 
+                    return list
+
                 }
 
-                return list
+                
 
             },
 
             isThereNextPage() {
 
-                if ( Math.ceil(this.songs.length / 3) - 1 > this.page) {
-                    
-                    return true
+                if (this.songs === undefined || this.songs === null) {
+                
+                    return false
                 
                 } else {
 
-                    return false
+                    if ( Math.ceil(this.songs.length / 3) - 1 > this.page) {
+                    
+                    return true
+                
+                    } else {
+
+                        return false
+
+                    }
 
                 }
+
 
             },
 
             isTherePrevPage() {
+                if (this.songs === undefined || this.songs === null) {
+                
+                    return false
+                
+                } else {
+
+                    if (this.page === 0) {
+                    
+                        return false
+
+                    } else {
+
+                        return true
+
+                    }
+
+                }
 
                 if (this.page === 0) {
                     

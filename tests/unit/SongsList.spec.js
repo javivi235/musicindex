@@ -21,7 +21,7 @@ describe('Songs list', () => {
     beforeEach(() => {
 
         wrapper = mount(SongsList, {
-            props: {
+            propsData: {
                 songs: songs
             }
         })
@@ -30,15 +30,15 @@ describe('Songs list', () => {
 
     it('3 songs max are rendered for page', () => {
 
-        assert.equal(wrapper.findAllComponents(SongElement).length, 3, 'the 3 first songs arent displayed in the first page')
+        assert.equal(wrapper.vm.renderedSongs.length, 3, 'the 3 first songs arent displayed in the first page')
 
     })
 
     it('2 songs are displayed in the last page', async () => {
 
-        await wrapper.find('nextPageButton').trigger('click')
+        await wrapper.find('#nextPageButton').trigger('click')
 
-        assert.equal(wrapper.findAllComponents(SongElement).length, 2, 'the 3 first songs arent displayed in the first page')
+        assert.equal(wrapper.vm.renderedSongs.length, 2, 'the 3 first songs arent displayed in the first page')
 
     })
 
