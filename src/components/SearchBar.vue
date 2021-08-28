@@ -3,18 +3,18 @@
         <input
         v-model="text"
         id="searchInput"
-        type="search"
         class="form-control rounded"
         placeholder="Write the name of a son or an artist here!"
         aria-label="Search"
         aria-describedby="search-addon" />
         <span
         class="input-group-text border-0"
-        id="searchSpan">
+        id="searchSpan"
+        @click="search"
+        >
             <i
             id="searchButton"
             class="fas fa-search"
-            @click="search"
             >
             </i>
         </span>
