@@ -16,12 +16,26 @@
 
     export default {
 
+        name: 'SearchView',
+
+        data() {
+
+            return{
+
+                results: []
+
+            }
+
+        },
+
         methods: {
 
             async searchSong(text) {
 
-                const result = await searchSong(text)
-                console.log(result)
+                this.results = await searchSong(text)
+
+                if (this.results.length === 0)
+                    alert("No results found")
 
             }
 
