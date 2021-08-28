@@ -5,6 +5,17 @@
             <div class="row">
                <SearchBar @searchSong="searchSong"/>
             </div>
+            <div class="row">
+                <SongElement
+                image = "https://is5-ssl.mzstatic.com/image/thumb/Music114/v4/2b/99/68/2b996877-2fbe-391a-07f1-886df7d304c8/source/100x100bb.jpg"
+                name = "Boss's Daugther"
+                artist = "Pop Evil"
+                album = "War of Angels"
+                time = "2011"
+                price = "7.99 USD"
+                link = "https://music.apple.com/us/album/bosss-daughter/483220906?i=483221313&uo=4"
+                />
+            </div>
         </div>
 
     </div>
@@ -12,6 +23,7 @@
 
 <script>
     import SearchBar from '@/components/SearchBar.vue'
+    import SongElement from '@/components/SongElement.vue'
     import { searchSong } from '../Utils/ITunesAPIUtil.js'
 
     export default {
@@ -43,6 +55,7 @@
         components: {
 
             SearchBar,
+            SongElement,
         
         },
     
