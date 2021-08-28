@@ -25,7 +25,7 @@
 <style>
   #app {
     text-align: center;
-    background-color: #d5f5b1;
+    background-color: #013220;
     height: 100vh + 100px;
     width: 100vw;
   }
