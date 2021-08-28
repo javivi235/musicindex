@@ -1,6 +1,11 @@
 # musicindex
 
+Tool to search music from ITunes
+
 ## Project setup
+
+To run this project please use:
+
 ```
 npm install
 ```
@@ -19,6 +24,3 @@ npm run build
 ```
 npm run test:unit
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
